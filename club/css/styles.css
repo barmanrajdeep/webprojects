@@ -1,0 +1,77 @@
+@font-face
+{
+    font-family: 'Georgia';
+	src: url('../fonts/Georgia.eot?#iefix') format('embedded-opentype'), url('../fonts/Georgia.ttf') format('truetype');
+}
+body {
+font-family: sans-serif;
+font-size: 16px;
+}
+.c_a {
+width: 100%;
+max-width: 960px;
+margin: 0 auto;
+position: relative;
+}
+/*h1 {
+margin-bottom: 10px;
+}*/
+.ind_reg_ink {
+position: absolute;
+top: 14px;
+left:500px;
+}
+.ha {
+font-size: 25px;
+font-family: Georgia;
+}
+.c_a hr:first-of-type {
+width: 33%;
+margin-left: 0;
+margin-bottom: 20px;
+}
+input[type="text"], input[type="password"], input[type="submit"], input[type="email"], input[type="button"] {
+border: 2px inset;
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+} 
+input[type="submit"], input[type="button"] {
+color: buttontext;
+padding: 2px 6px 3px;
+border: 2px outset buttonface;
+background-color: buttonface;
+}
+.reg_a form, .ind_b form {
+width: 333px;
+position: relative;
+margin-left: 300px;
+}
+.reg_a form label {
+width: 133px;
+display: inline-block;
+text-align: right;
+}
+.reg_a form label span {color: red;}
+.ind_a {font-weight: bold; font-size: 30px; font-family: Georgia;color: #cc0000;}
+.ind_a span {color: #cc3300;}
+.ind_b form {
+width: 313px;
+position: relative;
+margin-left: 300px;
+}
+.ind_b form label {display: inline-block; text-align: right; width: 113px;}
+.ind_b form label, .reg_a form label {font-size:15px;}
+.cbox {
+margin-right: 5px;
+}
+.ind_reg_ink {
+background-color: khaki;
+padding: 4px 6px 3px 6px;
+border-radius: 3px;
+color: black;
+margin-top: -9px;
+display: inline-block;
+}

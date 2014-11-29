@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Speed Tasks</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href='./css/reset.css' rel='stylesheet' type='test/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style>
+      body {font-family: 'Open Sans', sans-serif;}
+      #board {width: 220px}
+      #board input{border: 2px solid grey; width: inherit }
+      #listone li {float:left }
+      #listone:after {display:block;content:''}
+      #listone li:first-child {width: 200px; text-align: center}
+      ul {}
+    </style>
+  </head>
+  <body>
+    <div id="board">
+      <ul id=listone>
+        <li>TASKS</li>
+        <li id='add'><img onclick='fone()' height="16" width="16" src="./images/plus.png" alt="add task"></li>
+      </ul>
+      <input id='todo' type='text' name='task'>
+    </div>
+  </body>
+  <script type='text/javascript'>
+    function fone() {
+        var task = $('#todo').val();
+        if ( $('#todo').val() != '') {
+            $('#listone').append("<div class='tasks'>"+task+"</div>");
+            $('#todo').val('');
+        }
+    }
+  </script>
+</html>
