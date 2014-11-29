@@ -45,7 +45,7 @@ $('#form-container').submit(function () {
     $.ajax({
       url: 'en.wikipedia.org/w/api.php?action=query&list=allpages&format=json&apfrom=London&aplimit=10&rawcontinue=&titles='+cityInput,
       dataType: 'json',
-
+      success:
     }).error(function(e){
          $wikiErr.text("Request failed.");
       });
