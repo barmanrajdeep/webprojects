@@ -10,7 +10,7 @@
       #board {width: 220px}
       #board input{border: 2px solid grey; width: inherit }
       #listone li {float:left }
-      #listone:after {display:block;content:''}
+      #listone:after {display:block;content:''; clear:both}
       #listone li:first-child {width: 200px; text-align: center}
       ul {}
     </style>
@@ -21,16 +21,26 @@
         <li>TASKS</li>
         <li id='add'><img onclick='fone()' height="16" width="16" src="./images/plus.png" alt="add task"></li>
       </ul>
-      <input id='todo' type='text' name='task'>
+      <div class="list"></div>
+      <input id='todo' type='text' onchange="fone()" name='task'>
     </div>
   </body>
   <script type='text/javascript'>
     function fone() {
         var task = $('#todo').val();
         if ( $('#todo').val() != '') {
-            $('#listone').append("<div class='tasks'>"+task+"</div>");
+            var count = localStorage.length;
+            count = count + 1;
+            localStorage.setItem(count, task);
+            $('.list').append("<div class='tasks'><span class='taskNo'>"+ count +". "+"</span><span class='task'>"+localStorage.getItem(count)+"</span></div>");
             $('#todo').val('');
         }
+    }
+    if (localStorage.length != 0) {
+      var count = localStorage.length;
+      for (var counter = 1; counter <= count; counter++) {
+        $('.list').append("<div class='tasks'><span class='taskNo'>"+ counter +". "+"</span><span class='task'>"+localStorage.getItem(counter)+"</span></div>");
+      }
     }
   </script>
 </html>
