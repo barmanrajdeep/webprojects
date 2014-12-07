@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <script>
+      function hey_man() {alert("Hey! You can close me. But, I'll be back in 5 secs"); delayAlert();}
+      function delayAlert() {
+        setTimeout("hey_man()", 5000);
+      }
+      delayAlert();
+    </script>
+  </body>
+</html>

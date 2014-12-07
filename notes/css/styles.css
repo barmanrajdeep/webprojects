@@ -1,0 +1,6 @@
+body {font-family: 'Open Sans', sans-serif;}
+#board {width: 220px}
+#board input{border: 2px solid grey; width: inherit }
+#listone li {float:left }
+#listone:after {display:block;content:''; clear:both}
+#listone li:first-child {width: 200px; text-align: center}
