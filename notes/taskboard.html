@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Speed Tasks</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-    <link href='./css/reset.css' rel='stylesheet' type='test/css'>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  </head>
-  <body>
-    <div id="board">
-      <ul id=listone>
-        <li>TASKS</li>
-        <li id='add'><img onclick='fone()' height="16" width="16" src="./images/plus.png" alt="add task"></li>
-      </ul>
-      <div class="list"></div>
-      <input id='todo' type='text' onchange="fone()" name='task'>
-    </div>
-  </body>
-  <script type='text/javascript'>
-    function fone() {
-        var task = $('#todo').val();
-        if ( $('#todo').val() != '') {
-            var count = localStorage.length;
-            count = count + 1;
-            localStorage.setItem(count, task);
-            $('.list').append("<div class='tasks'><span class='taskNo'>"+ count +". "+"</span><span class='task'>"+localStorage.getItem(count)+"</span></div>");
-            $('#todo').val('');
+<head>
+  <title>Speed Tasks</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <link href='./css/reset.css' rel='stylesheet' type='test/css'>
+  <link href='./css/styles.css' rel='stylesheet' type='test/css'>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="board">
+    <ul id=listone>
+      <li>TASKS</li>
+      <li id='add'><img onclick='del()' height="16" width="16" src="./images/delete.png" alt="add task"></li>
+    </ul>
+    <div class="list"></div>
+    <input id='todo' type='text' onchange="show()" name='task'>
+  </div>
+</body>
+<script type='text/javascript'>
+function show() {
+  var task = $('#todo').val();
+  if ( $('#todo').val() != '') {
+    var count = localStorage.length;
+    count = count + 1;
+    localStorage.setItem(count, task);
+    $('.list').append("<div class='tasks'><input class='taskCheck' onclick='clickme(this)' type='checkbox'><span class='taskNo'>"+ count +". "+"</span><span class='task'>"+localStorage.getItem(count)+"</span></div>");
+    $('#todo').val('');
+  }
+}
+if (localStorage.length != 0) {
+  var count = localStorage.length;
+  for (var counter = 1; counter <= count; counter++) {
+    $('.list').append("<div class='tasks'><input class='taskCheck' onclick='clickme(this)' type='checkbox'><span class='taskNo'>"+ counter +". "+"</span><span class='task'>"+localStorage.getItem(counter)+"</span></div>");
+  }
+}
+
+function clickme(x) {
+  if (!x.checked) {
+    $(x).checked = true;
+  }
+  if (x.checked)
+    $(x).checked = false;
+  }
+  function del() {
+    var count = localStorage.length;
+    if (count > 0) {
+      $('.taskCheck').each(function(){
+        if($(this).is(":checked")) {
+          console.log($(this).parent().remove());
         }
+      });
     }
-    if (localStorage.length != 0) {
-      var count = localStorage.length;
-      for (var counter = 1; counter <= count; counter++) {
-        $('.list').append("<div class='tasks'><span class='taskNo'>"+ counter +". "+"</span><span class='task'>"+localStorage.getItem(counter)+"</span></div>");
-      }
-    }
-  </script>
+  }
+
+
+</script>
 </html>
