@@ -12,7 +12,7 @@
   <body>
       <label for="it" style='vertical-align: top;'>Text:&nbsp;</label>
       <textarea name="inputText" id="para" rows="23" cols="110"></textarea><p></p>
-      <button onclick="cc()">Word Count</button>
+      <button onclick="cc()">Character Count</button>
       <button onclick="words()">Comma separated values Count</button>
     </form>
   </body>
