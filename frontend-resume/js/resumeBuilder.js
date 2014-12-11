@@ -83,7 +83,7 @@ var education = {
     "degree": "ICSE",
     "majors": ["PCM"],
     "dates": "1999 - 2006",
-    "url": ""
+    "url": "http://saskurseong.com/"
   },
   {
     "name": "Birla Public School",
@@ -91,7 +91,7 @@ var education = {
     "degree": "CBSE",
     "majors": ["PCM"],
     "dates": "2006 - 2008",
-    "url": ""
+    "url": "http://www.bpspilani.com/"
   },
   {
     "name": "National Institute of Technology",
@@ -99,9 +99,87 @@ var education = {
     "degree": "Bachelor of Technology",
     "majors": ["Civil Engineering"],
     "dates": "2008 - 2012",
-    "url": ""
+    "url": "http://www.nits.ac.in/"
   }],
   "onlineCourses": [
+  {
+    "title": "Website Performance Optimization - The Critical Rendering Path",
+    "school": "Udacity",
+    "dates": "Nov 2014",
+    "url": "https://www.udacity.com/course/ud884"
+  },
+  {
+    "title": "JavaScript Basics - The Programming Language of the Web",
+    "school": "Udacity",
+    "dates": "September 2014",
+    "url": "https://www.udacity.com/course/ud804"
+  },
+  {
+    "title": "Object-Oriented JavaScript - Writing Reusable and Maintainable Code",
+    "school": "Udacity",
+    "dates": "October 2014",
+    "url": "https://www.udacity.com/course/ud015"
+  },
+  {
+    "title": "How to Use Git and GitHub - Version Control for Code",
+    "school": "Udacity",
+    "dates": "Oct 2014",
+    "url": "https://www.udacity.com/course/ud775"
+  },
+  {
+    "title": "Intro to AJAX - Making Asynchronous Requests with jQuery",
+    "school": "Udacity",
+    "dates": "Oct 2014",
+    "url": "https://www.udacity.com/course/ud110"
+  },
+  {
+    "title": "Intro to jQuery - Manipulating Websites with Ease",
+    "school": "Udacity",
+    "dates": "Oct 2014",
+    "url": "https://www.udacity.com/course/ud245"
+  },
+  {
+    "title": "Programming Foundations with Python - Learn Object-Oriented Programming",
+    "school": "Udacity",
+    "dates": "Nov 2014",
+    "url": "https://www.udacity.com/course/ud036"
+  },
+  {
+    "title": "Intro to Java Programming - Building Programs with Classes & Objects",
+    "school": "Udacity",
+    "dates": "Jan 2014",
+    "url": "https://www.udacity.com/course/cs046"
+  },
+  {
+    "title": "Building Dynamic Websites",
+    "school": "Harvard Online",
+    "dates": "September 2014",
+    "url": "http://cs75.tv/2012/summer/"
+  },
+  {
+    "title": "",
+    "school": "",
+    "dates": "",
+    "url": ""
+  },
+  {
+    "title": "",
+    "school": "",
+    "dates": "",
+    "url": ""
+  },
+  {
+    "title": "",
+    "school": "",
+    "dates": "",
+    "url": ""
+  },
+  {
+    "title": "",
+    "school": "",
+    "dates": "",
+    "url": ""
+  },
   {
     "title": "",
     "school": "",
