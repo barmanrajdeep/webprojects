@@ -1,4 +1,4 @@
-// var name = 'Rajdeep Barman';
+var name = 'Rajdeep Barman';
 // var role = 'Web Developer';
 
 
@@ -14,8 +14,8 @@ var bio = {
     "page": "www.rajdeepbarman.com"
   },
   "bioPic": "images/mypic.jpg",
-  "welcomeMessage": "Hello, World! Nice to meet you. I am a pro at web dev",
-  "skills": ["developing websites", "software dev", "communication", "analytics"],
+  "welcomeMessage": "Hello, World! I live and breathe coding on the web",
+  "skills": ["developing websites", "code performance optimization", "communication", "mentoring & managing"],
   "company": "LRR Tech"
 };
 
@@ -216,25 +216,25 @@ var education = {
 var work = {
   "jobs": [
   {
-    "employer":"Flareum Technologies",
-    "title":"Executive Engineer - Civil",
-    "location":"Valsad, Gujarat",
-    "dates":"August 2012 - March 2013",
-    "description":""
+    "employer":"LRR Technologies",
+    "title":"Full Stack Web Development Engineer",
+    "location":"Hyderabad, Telangana",
+    "dates":"May 2014 - Jan 2015",
+    "description":"Two projects - <a href='http://loyolaacademyugpg.ac.in/'>Loyola College</a> and <a href='http://uohyd.ac.in/'>University of Hyderabad</a> (Wordpress), Photoshop docs to W3C complaint webpages. Server-side PHP scripting.<a href='www.fullhyderabad.com'>www.fullhyd.com</a> and <a href='www.100pins.com'>www.100pins.com</a> Back-end code"
   },
   {
     "employer": "Criticalys Info Management",
-    "title": "Web Development Engineer - Intern",
+    "title": "Web Development Engineer",
     "location":"Hyderabad, Telangana",
     "dates":"February 2014 - April 2014",
-    "description":""
+    "description":"One project done"
   },
   {
-    "employer":"LRR Technologies",
-    "title":"Full Stack Web Development Engineer - Intern",
-    "location":"Hyderabad, Telangana",
-    "dates":"May 2014 - Jan 2015",
-    "description":""
+    "employer":"Flareum Technologies",
+    "title":"Executive Engineer",
+    "location":"Valsad, Gujarat",
+    "dates":"August 2012 - March 2013",
+    "description":"Design"
   }
   ]
 };
@@ -286,4 +286,23 @@ if ( bio.skills.length != 0 ) {
     var formattedHTMLskills = HTMLskills.replace('%data%', bio.skills[i]);
     $('#skills').append(formattedHTMLskills);
   }
+}
+for ( job in work.jobs ) {
+  $("#workExperience").append(HTMLworkStart);
+  var co = work.jobs[job].employer;
+  var profile = work.jobs[job].title;
+  var formattedHTMLworkEmployer = HTMLworkEmployer.replace("%data%", co);
+  var formattedHTMLworkTitle = HTMLworkTitle.replace("%data%", profile );
+  var workName = formattedHTMLworkEmployer + formattedHTMLworkTitle;
+
+  var formattedHTMLworkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+  var formattedHTMLworkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+  var formattedHTMLworkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
+
+  $(".work-entry:last").append(workName);
+  $(".work-entry:last").append(formattedHTMLworkDates);
+  $(".work-entry:last").append(formattedHTMLworkLocation);
+  $(".work-entry:last").append(formattedHTMLworkDescription);
+
 }
